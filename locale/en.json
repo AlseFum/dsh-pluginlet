@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Pluginlet",
+    "description": "A Conversation View tab per *.pluginlet file in .dsh/pluginlets/, with capabilities granted per content hash."
+  }
+}

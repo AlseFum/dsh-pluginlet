@@ -1,0 +1,70 @@
+{
+  "name": "dsh-pluginlet",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Every .pluginlet file in a repo becomes its own sandboxed Conversation View tab in DSH, with hash-bound capability grants",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlseFum/dsh-pluginlet.git"
+  },
+  "homepage": "https://github.com/AlseFum/dsh-pluginlet#readme",
+  "bugs": {
+    "url": "https://github.com/AlseFum/dsh-pluginlet/issues"
+  },
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "ops.js",
+    "config.js",
+    "scanner.js",
+    "grants.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "docs/DESIGN.md",
+    "skills"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs && node test/styles.mjs && node test/config.mjs && node test/skill.mjs && node test/client-registration.mjs && node test/frame-runtime.mjs && node test/host-ops.mjs",
+    "release:build": "node scripts/release.mjs"
+  },
+  "license": "MIT",
+  "author": "pluginlet contributors",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "pluginlet",
+    "workspace",
+    "sandbox",
+    "editor",
+    "skill"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

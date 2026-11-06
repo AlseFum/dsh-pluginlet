@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Pluginlet",
+    "description": "仓库自带的小视图：.dsh/pluginlets/*.pluginlet 各自变成一个页签，能力按内容哈希逐条授权。"
+  }
+}

@@ -1,0 +1,7 @@
+# pluginlet bundle layer: inserts the plugin row.
+# The row's `name` must be this package's bare name; a subpath export is not a
+# Loader-resolvable entry name. Apply config overrides in the profile's own
+# cordis.patch.yml instead of here.
+- insert:
+    - id: pluginlet
+      name: 'dsh-pluginlet'
